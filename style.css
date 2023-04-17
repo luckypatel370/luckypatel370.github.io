@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Palatino+Linotype&family=Georgia&family=Knewave&family=Shadows+Into+Light&family=Sigmar+One&family=Adelia&family=Permanent+Marker&family=Chewy&family=Bangers&family=Lato&family=Frijole&family=Faster+One&family=Montserrat&family=Open+Sans&family=Roboto&family=Righteous&family=Luckiest+Guy&family=Monoton&family=Press+Start+2P&family=Russo+One&family=Shrikhand&family=Trade+Winds&family=Unica+One&family=VT323&family=Zilla+Slab+Highlight&display=swap');
+
+
+/* CSS code for the input section */
+/* CSS code for the body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* CSS code for the font list section */
+#font-list {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* CSS code for the footer */
+footer {
+    background-color: #ff00bb7d;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* CSS code for small screens */
+@media (max-width: 768px) {
+    #input-box {
+        width: 80%;
+    }
+
+    #font-list {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+#input-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#input-box {
+    width: 50%;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #dd7070;
+    color: #1f0000;
+    background-color: #bff8f1;
+}
+
+#submit-button {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #008CBA;
+    color: #fff;
+    cursor: pointer;
+}
+
+#submit-button:hover {
+    background-color: #5d00ff54;
+}
+
+/* CSS code for the font list section */
+/* #font-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+} */
+
+.font-item {
+    min-width: 100px;
+    width: auto;
+    height: 50px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #00ffe1;
+    position: relative;
+}
+
+.font-item:hover {
+    box-shadow: 1px 1px 10px #ff0000;
+}
+
+.font-item a {
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.font-item:hover::before {
+    content: attr(data-font);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.dark-mode {
+    background-color: #0c0c0c;
+    color: #fff;
+}
+
+/* .dark-mode #output {
+    color: #fff !important;
+} */
+
+.dark-mode #input-box {
+    background-color: #1e1e1e;
+    color: #0a9eed;
+}
+
+.dark-mode #submit-button {
+
+    background-color: #000000;
+    color: #fa060660;
+
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+    display: none;
+}
+
+.dark-mode-toggle label {
+    display: block;
+    width: 60px;
+    height: 34px;
+    border-radius: 34px;
+    background-color: #000000;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dark-mode-toggle label:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #f0001871;
+    transition: transform 0.3s;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked+label {
+    background-color: #2196f3;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked+label:before {
+    transform: translateX(26px);
+}
+
+/* CSS code for the footer */
+/* footer {
+    background-color: #008CBA;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+} */
+p {
+    font-family: var(--selected-font);
+    color: inherit;
+}
+
+
+.dark-mode .font-item a {
+    color: #fac6c6;
+}
+
+/* Hide the default mouse pointer */
+/* Hide the default mouse pointer */
+body {
+    cursor: none;
+  }
+  
+  /* Add a custom mouse pointer */
+  #custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    z-index: 9999;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Add a hole to the custom mouse pointer */
+  #custom-cursor::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff00;
+    z-index: -1;
+  }
+  
+  /* Change the cursor style when hovering over text or input-box elements */
+input[type="text"]:hover,
+textarea:hover,
+a:hover,
+button:hover {
+  cursor: text;
+}
+
+/* Change the cursor style when hovering over the custom cursor element */
+#custom-cursor:hover {
+  cursor: none;
+}
+  
+  
